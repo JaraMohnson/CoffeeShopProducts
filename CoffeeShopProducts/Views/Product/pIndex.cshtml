@@ -1,0 +1,20 @@
+﻿@model List<Product>
+
+
+	<div style = "margin: auto; text-align:center">  
+		
+<h1 > Here are categories of drinks currently offered </h1>
+<h2 > Select a Category of Drink to View </h2>
+@{
+	foreach (Product p in Model)
+	{
+		
+		<a style = "margin: auto; text-align:center" asp-controller="Product" asp-action="Category" asp-route-category = "@p.Category" > @p.Category </a> 
+		<br />
+	}
+}
+
+
+
+	</div>
+
